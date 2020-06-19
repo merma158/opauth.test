@@ -2,23 +2,22 @@
 
 require_once 'vendor/autoload.php';
 
-$config = array(
 
-  'path' => '/',
 /**
- * Callback URL: redirected to after authentication, successful or otherwise
+ * Define paths
  */
-  'callback_url' => '{path}callback.php',
+define('CONF_FILE', dirname(__FILE__).'/'.'opauth.conf.php');
+define('OPAUTH_LIB_DIR', dirname(__FILE__).'/vendor/opauth/opauth/lib/Opauth/');
+
+
 /**
- * A random string used for signing of $auth response.
- */
-  'security_salt' => 'LDFmiilYf8Fyw5W10rx4W1KsVrieQCnpBzzpTBWA5vJidQKDx8pMJbmw28R1C4m',
+* Load config
+*/
+if (!file_exists(CONF_FILE)) {
+  trigger_error('Config file missing at '.CONF_FILE, E_USER_ERROR);
+  exit();
+}
 
-  'Strategy' => array(
-    // Define strategies and their respective configs here
-    
-  ),
-);
-
+require CONF_FILE;
 
 //$Opauth = new Opauth( $config );
