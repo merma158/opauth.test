@@ -20,4 +20,4 @@ if (!file_exists(CONF_FILE)) {
 
 require CONF_FILE;
 
-//$Opauth = new Opauth( $config );
+$Opauth = new Opauth( $config );

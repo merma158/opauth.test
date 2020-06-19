@@ -42,6 +42,9 @@ $config = array(
  */
   'Strategy' => array(
     // Define strategies and their respective configs here
-    
+    'Facebook' => array(
+    	'app_id' => '794926124245896'
+    	'app_secret' => '30559d993908175b286c7eff35ef99d1'
+    );
   ),
 );
