@@ -18,7 +18,7 @@ $config = array(
 /**
  * Callback URL: redirected to after authentication, successful or otherwise
  */
-  'callback_url' => '{path}callback.php',
+  'callback_url' => '/callback.php',
   
 /**
  * A random string used for signing of $auth response.
@@ -43,8 +43,8 @@ $config = array(
   'Strategy' => array(
     // Define strategies and their respective configs here
     'Facebook' => array(
-    	'app_id' => '794926124245896'
+    	'app_id' => '794926124245896',
     	'app_secret' => '30559d993908175b286c7eff35ef99d1'
-    );
+    )
   ),
 );
